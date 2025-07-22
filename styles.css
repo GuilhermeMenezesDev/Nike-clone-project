@@ -2,60 +2,75 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
-    background-color:greenyellow;
+    background: greenyellow;
     color: white;
-    padding: 20px 160px;
+    padding: 20px 110px;
     height: 100vh;
     overflow: hidden;
 }
 
-body::before{
+
+body::before {
     content: "";
-    background: rgb(22, 22, 22);
+    background: rgb(29, 28, 28);
     width: 100%;
     height: 120%;
     position: absolute;
     top: 0;
-    left: 638px;
+    left: -710px;
     transform: rotate(-70deg);
+
+
+
+
 }
 
-body::after{
+body::after {
     content: "Nike";
     position: absolute;
     top: 50%;
     left: 50%;
-    color: black;
+    color: rgb(61, 58, 58);
+    opacity: 0.4;
     font-size: 220px;
     font-weight: bold;
     font-style: italic;
     transform: translate(-50%, -50%)
-
 }
+
 .principal {
     width: 200px;
+    position: relative;
+    z-index: 1;
 }
 
-.tenis1{
+.tenis {
     width: 800px;
     transform: rotate(-25deg);
+    filter: drop-shadow(30px 40px 45px  #161616 );
+    transition: 1s;
+}
+
+.troca-efeito{
+    opacity: 0px;
+    transform: rotate(-25deg) translateY(-32px);
 }
 
 h2 {
     font-size: 50px;
 }
 
-h1{
+h1 {
     font-size: 80px;
 
 }
 
-p{
+p {
     font-size: 18px;
     margin-bottom: 80px;
 }
 
-.botao-carrinho{
+.botao-carrinho {
     background: greenyellow;
     padding: 18px;
     border-radius: 30px;
@@ -64,23 +79,61 @@ p{
     font-weight: 600;
     transition: 0.7s;
     cursor: pointer;
-    
+
 
 }
 
-.botao-carrinho:hover{
+.botao-carrinho:hover {
     opacity: 0.5;
 
 }
 
-.caixa-principal{
+.caixa-principal {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 75%;
+    position: relative;
+    z-index: 1;
 }
 
-.caixa-texto{
-    max-width: 650px;
+.caixa-texto {
+    max-width: 600px;
+    font-weight: bold;
+
+}
+
+.caixa-botoes {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 15px;
+}
+
+.botao {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.verde {
+    background: greenyellow;
+}
+
+.azul {
+    background: rgb(101, 101, 235);
+
+}
+
+.rosa {
+    background: rgb(245, 131, 150);
+
+}
+
+
+.botao:hover {
+    opacity: 0.7;
 
 }
